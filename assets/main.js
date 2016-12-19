@@ -31,5 +31,5 @@ function populateWithCourses {
         text: 'See Course'
       }).appendTo($div);
     });
-  }
+}
 });
