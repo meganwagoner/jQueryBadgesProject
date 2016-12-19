@@ -3,14 +3,16 @@ $(function() {
   $.ajax({
   url: 'https://www.codeschool.com/users/megwag.json',
   dataType: 'jsonp',
-  success:function(data) {
-    populateWithCourses(data.courses.completed)
-  }
+    success: function(data) {
+      populateWithCourses(data.courses.completed)
+    }
+  });
 
-});
-function populateWithCourses {
-  var $badges = $('#badges');
-  courses.forEach(function(course) {
+  function populateWithCourses(courses) {
+
+    var $badges = $('#badges');
+
+    courses.forEach(function(course) {
 
       $div = $('<div />', {
         'class': 'course'
@@ -30,6 +32,9 @@ function populateWithCourses {
         href: course.url,
         text: 'See Course'
       }).appendTo($div);
+
     });
-}
+
+  }
+
 });
